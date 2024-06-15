@@ -12,7 +12,9 @@ module.exports = {
         redprime : '#EF4444',
         teal : '#10B981',
         stone : '#fafaf9',
-        darkblue : '#1E3A8A'
+        darkblue : '#1E3A8A',
+        'purple-500': '#6b46c1',
+        'blue-500': '#3182ce',
       },
       animation: {
         'flip-left': 'flipLeft 0.6s ease-out forwards',
