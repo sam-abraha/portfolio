@@ -38,7 +38,7 @@ export default function CaseStudyPage() {
     const nextProject = findNextProject(id);
     if (nextProject) {
       setDirection('left');
-      setTimeout(() => navigate(`/casestudy/${nextProject.id}`), 300); // Duration must match the transition duration
+      setTimeout(() => navigate(`/casestudy/${nextProject.id}`), 300);
     }
   };
 
@@ -46,7 +46,7 @@ export default function CaseStudyPage() {
     const prevProject = findPrevProject(id);
     if (prevProject) {
       setDirection('right');
-      setTimeout(() => navigate(`/casestudy/${prevProject.id}`), 300); // Duration must match the transition duration
+      setTimeout(() => navigate(`/casestudy/${prevProject.id}`), 300);
     }
   };
 
