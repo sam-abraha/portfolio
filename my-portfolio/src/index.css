@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slideRail {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(10px);
+    }
+  }
+  
+  /* Apply the animation to the title on hover */
+  .hover\:rail-effect:hover {
+    animation: slideRail .1s forwards;
+  }
