@@ -4,6 +4,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import CaseStudyTemplate from '../components/CaseStudyTemplate';
 import { useSwipeable } from 'react-swipeable';
 import clsx from 'clsx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 export default function CaseStudyPage() {
   const { id } = useParams();
@@ -78,7 +80,9 @@ export default function CaseStudyPage() {
             implementation={caseStudy.implementation}
           />
         ) : (
-          <p>Loading...</p>
+        <div className='flex justify-center items-center min-h-screen'>
+          <FontAwesomeIcon icon={faSpinner} spin size='3x'/>
+        </div>
         )}
       </div>
     </div>

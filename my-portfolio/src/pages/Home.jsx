@@ -3,15 +3,22 @@ import ProjectCard from "../components/ProjectCard";
 import { Link } from "react-router-dom";
 import { FaEnvelope, FaGithub } from "react-icons/fa6";
 import { motion } from 'framer-motion'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Home() {
 
   const [projects, setProject] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     fetch('/projects.json')
     .then(response => response.json())
-    .then(data => setProject(data))
+    .then(data => {
+      setProject(data)
+      setLoading(false)
+    })
     .catch(error => console.log("Error fetching projects", error))
   }, [])
 
@@ -59,7 +66,7 @@ export default function Home() {
             </div>
         </header>
         <div className="text-center mb-4">
-          {projects.map((project, index) => (
+          {!loading ? projects.map((project, index) => (
             <section key={index} className="mb-16">
               <ProjectCard 
               id={project.id}
@@ -70,7 +77,11 @@ export default function Home() {
               github={project.github}
               /> 
             </section>
-          ))}
+          )) : (
+          <div className='flex justify-center items-center min-h-screen'>
+            <FontAwesomeIcon icon={faSpinner} spin size='3x'/>
+          </div>
+          )}
         </div>
         </div>
       </>
