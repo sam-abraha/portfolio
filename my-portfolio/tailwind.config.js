@@ -13,8 +13,8 @@ module.exports = {
         teal : '#10B981',
         stone : '#fafaf9',
         darkblue : '#1E3A8A',
-        'purple-500': '#6b46c1',
-        'blue-500': '#3182ce',
+        lightgrey : '#868F96',
+        darkgrey : '#596164',
       },
       animation: {
         'flip-left': 'flipLeft 0.6s ease-out forwards',
