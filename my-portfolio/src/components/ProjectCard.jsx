@@ -40,7 +40,7 @@ export default function ProjectCard({ videoSrc, techstack, title, description, i
           ))}
         </p>
         <Link to={`/casestudy/${id}`}>
-          <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold text-left hover:ml-4 transition-all duration-500 ease-in-out transform hover:scale-110'>{title}</h1>
+          <h1 className='text-4xl md:text-3xl lg:text-9xl font-bold text-left hover:ml-4 transition-all duration-500 ease-in-out transform hover:scale-110'>{title}</h1>
         </Link>
         <p className="text-gray-700 mt-4 text-left">{description}</p>
         <div className="flex space-x-4 mt-8">

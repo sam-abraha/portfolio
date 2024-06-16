@@ -42,14 +42,14 @@ export default function Home() {
       <>
         <div className="mt-8 min-h-screen p-2 flex flex-col items-center bg-neutral-50">
         <header className="w-full mx-auto md:px-8 my-10">
-              <div className="lowercase font-light ml-8 mb-4 mt-4 text-gray-500 text-9xl">
+              <div className="lowercase font-light ml-8 mb-4 mt-4 text-gray-500 text-6xl">
                 <h1 className="text-sm tracking-wider text-gray-500 mb-4">
                 Fullstack Projects
                 </h1>
                 <h1>{renderHoverLetters("Some")}</h1>
                 <h2>{renderHoverLetters("Projects")}</h2>
               </div>
-              <div className="flex justify-center items-center md:justify-start  space-x-4 mt-8  ml-8">
+              <div className="flex justify-left items-center space-x-4 mt-8  ml-8">
                 <Link to={"https://github.com/sam-abraha"} className="flex items-center border-solid bg-transparent text-black text-lg py-4 px-8 rounded hover:bg-gray-200 shadow-md transition duration-300 ease-in-out" target="_blank" rel="noopener noreferrer">
                     <FaGithub className="mr-2"/> Github
                 </Link>
