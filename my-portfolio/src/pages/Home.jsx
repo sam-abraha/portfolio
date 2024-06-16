@@ -16,10 +16,13 @@ export default function Home() {
     fetch('/projects.json')
     .then(response => response.json())
     .then(data => {
-      setProject(data)
-      setLoading(false)
+      setProject(data);
+      setLoading(false);
     })
-    .catch(error => console.log("Error fetching projects", error))
+    .catch(error =>  {
+      console.log("Error fetching projects", error);
+      setLoading(false);
+    })
   }, [])
 
   const hoverVariants = {
