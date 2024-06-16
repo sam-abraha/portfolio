@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default function ProjectCard({ videoSrc, techstack, title, description, id, github }) {
   const techItems = techstack.split(',');
   const videoRef = useRef(null);
-  const [caseStudy, setCaseStudy] = useState('')
+  const [caseStudy, setCaseStudy] = useState('');
 
   useEffect(() => {
     if (videoRef.current) {
@@ -14,19 +14,23 @@ export default function ProjectCard({ videoSrc, techstack, title, description, i
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row w-full max-w-6xl p-5 my-10 bg-transparent shadow-lg rounded-xl transition-transform transform hover:scale-105">
-      <div className="flex-1 flex flex-col items-start md:mr-5 mb-5 md:mb-0">
+    <div className="flex flex-col md:flex-row w-full max-w-6xl p-5 my-10 bg-transparent shadow-lg rounded-xl transition-transform transform hover:scale-105 overflow-x-auto">
+      <div className="flex-1 flex-shrink-0 flex flex-col items-start md:mr-5 mb-5 md:mb-0" style={{ minWidth: '300px' }}>
         <Link to={`/casestudy/${id}`}>
-        <video
-          ref={videoRef}
-          className="w-full h-auto object-cover rounded-3xl mb-2"
-          style={{ minHeight: '350px', minWidth: '600px' }} loop autoPlay muted>
-          <source src={videoSrc} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+          <video
+            ref={videoRef}
+            className="w-full h-auto object-cover rounded-3xl mb-2"
+            style={{ minHeight: '200px' }}
+            loop
+            autoPlay
+            muted
+          >
+            <source src={videoSrc} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </Link>
       </div>
-      <div className="flex-1 flex flex-col items-start">
+      <div className="flex-1 flex-shrink-0 flex flex-col items-start" style={{ minWidth: '300px' }}>
         <p className='text-left text-sm font-semibold text-gray-700 mb-2 prose'>
           {techItems.map((tech, index) => (
             <span key={index} className="mr-2">
@@ -36,7 +40,7 @@ export default function ProjectCard({ videoSrc, techstack, title, description, i
           ))}
         </p>
         <Link to={`/casestudy/${id}`}>
-        <h1 className='text-9xl font-bold text-left hover:ml-4 transition-all duration-500 ease-in-out transform hover:scale-110'>{title}</h1>
+          <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold text-left hover:ml-4 transition-all duration-500 ease-in-out transform hover:scale-110'>{title}</h1>
         </Link>
         <p className="text-gray-700 mt-4 text-left">{description}</p>
         <div className="flex space-x-4 mt-8">
