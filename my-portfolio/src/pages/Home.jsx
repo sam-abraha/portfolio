@@ -5,6 +5,7 @@ import { FaEnvelope, FaGithub } from "react-icons/fa6";
 import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import Footer from "../components/Footer";
 
 
 export default function Home() {
@@ -87,6 +88,7 @@ export default function Home() {
           )}
         </div>
         </div>
+        <Footer/>
       </>
     );
   }
