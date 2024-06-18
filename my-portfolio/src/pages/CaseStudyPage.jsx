@@ -75,7 +75,6 @@ export default function CaseStudyPage() {
             title={caseStudy.title}
             createdAt={caseStudy.createdAt}
             videoSrc={caseStudy.videoSrc}
-            summary={caseStudy.summary}
             idea={caseStudy.idea}
             implementation={caseStudy.implementation}
           />

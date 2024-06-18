@@ -4,7 +4,7 @@ import { format } from 'date-fns';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-export default function CaseStudyTemplate({ id, title, createdAt, videoSrc, summary, idea, implementation }) {
+export default function CaseStudyTemplate({ id, title, createdAt, videoSrc, idea, implementation }) {
   const videoRef = useRef(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -46,8 +46,6 @@ export default function CaseStudyTemplate({ id, title, createdAt, videoSrc, summ
           <p className="text-sm text-gray-700">{format(new Date(createdAt), 'MMMM dd, yyyy')}</p>
         </header>
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-700">Summary</h2>
-          <p>{summary}</p>
           <video
             key={id}
             ref={videoRef}
