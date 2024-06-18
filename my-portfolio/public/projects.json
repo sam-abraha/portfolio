@@ -7,10 +7,8 @@
     "description": "A blog web application which allows users to post their news.",
     "techstack": "typescript, react, express, prisma, postgres, firebase cloud storage",
     "createdAt": "2023-06-13",
-    "summary": "This is a brief summary of the blog project.",
     "idea": "Here is the detailed idea behind the blog project.",
-    "implementation" :"x",
-    "result": "These are the results and outcomes of the blog project."
+    "implementation" :"x"
   },
   {
     "id": "2",
@@ -20,10 +18,8 @@
     "description": "A social media web application with the twist that a user post consists of a document.",
     "techstack": "react, spring-boot, firestore",
     "createdAt": "2023-07-21",
-    "summary": "This is a brief summary of the Murdoc project.",
     "idea": "Here is the detailed idea behind the Murdoc project.",
-    "implementation" :"x",
-    "result": "These are the results and outcomes of the Murdoc project."
+    "implementation" :"x"
   },
   {
     "id": "3",
@@ -33,9 +29,7 @@
     "description": "A chat room application in which users can chat in real time.",
     "techstack": "python, flask",
     "createdAt": "2023-08-10",
-    "summary": "This is a brief summary of the Chat project.",
     "idea": "Here is the detailed idea behind the Chat project.",
-    "implementation" :"x",
-    "result": "These are the results and outcomes of the Chat project."
+    "implementation" :"x"
   }
 ]
