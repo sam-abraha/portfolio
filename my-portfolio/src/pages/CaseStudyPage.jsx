@@ -77,6 +77,7 @@ export default function CaseStudyPage() {
             videoSrc={caseStudy.videoSrc}
             idea={caseStudy.idea}
             implementation={caseStudy.implementation}
+            deployment={caseStudy.deployment}
           />
         ) : (
         <div className='flex justify-center items-center min-h-screen'>

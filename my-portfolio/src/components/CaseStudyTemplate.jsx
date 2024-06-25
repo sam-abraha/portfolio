@@ -3,8 +3,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import { format } from 'date-fns';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
-export default function CaseStudyTemplate({ id, title, createdAt, videoSrc, idea, implementation }) {
+export default function CaseStudyTemplate({ id, title, createdAt, videoSrc, idea, implementation, deployment }) {
   const videoRef = useRef(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -66,6 +67,16 @@ export default function CaseStudyTemplate({ id, title, createdAt, videoSrc, idea
           <h2 className="text-2xl font-semibold text-gray-700">Implementation</h2>
           <p>{implementation}</p>
         </section>
+        {deployment && (
+            <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-700">Deployment</h2>
+            <p>
+              Visit the deployment on{' '}
+              <Link to={deployment}>{deployment}</Link>
+              .
+            </p>
+          </section>
+          )}
       </div>
       {isModalOpen && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
