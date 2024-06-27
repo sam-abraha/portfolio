@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 export default function ProjectCard({ videoSrc, techstack, title, description, id, github }) {
   const techItems = techstack.split(',');
   const videoRef = useRef(null);
-  const [caseStudy, setCaseStudy] = useState('');
 
   useEffect(() => {
     if (videoRef.current) {
@@ -26,7 +25,6 @@ export default function ProjectCard({ videoSrc, techstack, title, description, i
             muted
           >
             <source src={videoSrc} type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
         </Link>
       </div>

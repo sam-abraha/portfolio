@@ -1,4 +1,3 @@
-// src/components/CaseStudyTemplate.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { format } from 'date-fns';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
