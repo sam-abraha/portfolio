@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import Footer from "../components/Footer";
+import CurrentProjectCard from "../components/CurrentProjectCard";
 
 
 export default function Home() {
@@ -70,7 +71,16 @@ export default function Home() {
             </div>
         </header>
         <div className="text-center mb-4">
-          {!loading ? projects.map((project, index) => (
+          {!loading ? 
+          <>
+            <section className="mb-16">
+                <CurrentProjectCard
+                  title="Dorms"
+                  description="Dorms will be a web application designed to help students share and discover reviews about their dorms. It is the current project im tackling on so, devolopment is still in progress."
+                  techstack={"angular, nestjs, prisma, postgres, typescript"}
+                />
+            </section>
+            {projects.map((project, index) => (
             <section key={index} className="mb-16">
               <ProjectCard 
               id={project.id}
@@ -81,11 +91,14 @@ export default function Home() {
               github={project.github}
               /> 
             </section>
-          )) : (
+          ))}
+          </>
+           : (
           <div className='flex justify-center items-center min-h-screen'>
             <FontAwesomeIcon icon={faSpinner} spin size='3x'/>
           </div>
           )}
+
         </div>
         </div>
         <Footer/>
