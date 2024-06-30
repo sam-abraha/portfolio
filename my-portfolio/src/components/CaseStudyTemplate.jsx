@@ -55,7 +55,6 @@ export default function CaseStudyTemplate({ id, title, createdAt, videoSrc, idea
             loop autoPlay muted
           >
             <source src={videoSrc} type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
         </section>
         <section className="mb-8">
@@ -92,10 +91,8 @@ export default function CaseStudyTemplate({ id, title, createdAt, videoSrc, idea
                   loop autoPlay muted
                   style= {{minHeight : '350px'}}
                   className="max-w-full object-cover"
-
                 >
                     <source src={videoSrc} type="video/mp4" />
-                    Your browser does not support the video tag
                 </video>
             </div>
         </div>
