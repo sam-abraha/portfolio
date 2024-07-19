@@ -60,7 +60,7 @@ export default function CaseStudyPage() {
   });
 
   return (
-    <div {...handlers} className="bg-neutral-50 min-h-screen py-12 overflow-hidden">
+    <div {...handlers} className="bg-primary min-h-screen py-12 overflow-hidden font-sans">
       <div className={clsx(
         "transition-transform duration-300 transform",
         {
@@ -78,6 +78,7 @@ export default function CaseStudyPage() {
             idea={caseStudy.idea}
             implementation={caseStudy.implementation}
             deployment={caseStudy.deployment}
+            videoSrc_2={caseStudy.videoSrc_2}
           />
         ) : (
         <div className='flex justify-center items-center min-h-screen'>
