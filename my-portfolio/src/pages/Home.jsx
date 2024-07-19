@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import Footer from "../components/Footer";
 import CurrentProjectCard from "../components/CurrentProjectCard";
+import Introduction from "../components/Introduction";
 
 
 export default function Home() {
@@ -52,56 +53,38 @@ export default function Home() {
 
     return (
       <>
-        <div className="mt-8 min-h-screen p-2 flex flex-col items-center bg-neutral-50">
-        <header className="w-full mx-auto md:px-8 my-10">
-              <div className="lowercase font-light ml-8 mb-4 mt-4 text-gray-500 text-6xl">
-                <h1 className="text-sm tracking-wider text-gray-500 mb-4">
-                Fullstack Projects
-                </h1>
-                <h2>{renderHoverLetters("my")}</h2>
-                <h2>{renderHoverLetters("projects")}</h2>
-              </div>
-              <div className="flex justify-left items-center space-x-4 mt-8  ml-8">
-                <Link to={"https://github.com/sam-abraha"} className="flex items-center border-solid bg-transparent text-black text-lg py-4 px-8 rounded hover:bg-gray-200 shadow-md transition duration-300 ease-in-out" target="_blank" rel="noopener noreferrer">
-                    <FaGithub className="mr-2"/> Github
-                </Link>
-                <Link to={"mailto:samuelabrh@gmail.com"} className="flex items-center border-solid bg-transparent text-black text-lg py-4 px-8 rounded hover:bg-gray-200 shadow-md transition duration-300 ease-in-out">
-                    <FaEnvelope className="mr-2"/> Email
-                </Link>
-            </div>
-        </header>
-        <div className="text-center mb-4">
-          {!loading ? 
-          <>
-            <section className="mb-16">
-                <CurrentProjectCard
-                  title="Dorms"
-                  description="Dorms will be a web application designed to help students share and discover reviews about their dorms. It is the current project im tackling on so, devolopment is still in progress."
-                  techstack={"angular, nestjs, prisma, postgres, typescript"}
-                />
-            </section>
-            {projects.map((project, index) => (
-            <section key={index} className="mb-16">
-              <ProjectCard 
-              id={project.id}
-              videoSrc={project.videoSrc}
-              title={project.title}
-              description={project.description}
-              techstack={project.techstack}
-              github={project.github}
-              /> 
-            </section>
-          ))}
-          </>
-           : (
-          <div className='flex justify-center items-center min-h-screen'>
-            <FontAwesomeIcon icon={faSpinner} spin size='3x'/>
-          </div>
-          )}
+      <div className="text-center bg-primary min-h-screen">
+  {!loading ? (
+    <>
+      <Introduction />
+      <section className="mb-16">
+        <CurrentProjectCard
+          title="Dorms"
+          description="Dorms will be a web application designed to help students share and discover reviews about their dorms. It is the current project I'm tackling on, so development is still in progress."
+          techstack={"angular, nestjs, prisma, postgres, typescript"}
+        />
+      </section>
+      {projects.map((project, index) => (
+        <section key={index} className="mb-16">
+          <ProjectCard 
+            id={project.id}
+            videoSrc={project.videoSrc}
+            title={project.title}
+            description={project.description}
+            techstack={project.techstack}
+            github={project.github}
+          /> 
+        </section>
+      ))}
+    </>
+  ) : (
+    <div className='flex justify-center items-center min-h-screen'>
+      <FontAwesomeIcon icon={faSpinner} spin size='3x'/>
+    </div>
+  )}
+  <Footer/>
+</div>
 
-        </div>
-        </div>
-        <Footer/>
       </>
     );
   }
