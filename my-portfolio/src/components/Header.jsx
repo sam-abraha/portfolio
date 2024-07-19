@@ -3,16 +3,16 @@ import { NavLink } from "react-router-dom";
 
 export default function Header() {
     return (
-        <header className="bg-zinc-300 fixed top-0 left-0 right-0 z-50 p-4 shadow-md text-sm">
-            <div className="container mx-auto flex justify-between items-center">
+        <header className="bg-primary fixed top-0 left-0 right-0 mb-4 z-50 p-6 text-sm font-sans">
+            <div className="container mx-auto flex justify-around items-center">
                 <NavLink to="/" className="text-black font-semibold">
-                    Samuel Abraha <span className="text-stone">Portfolio</span>
+                    Home
                 </NavLink>
                 <nav className="flex space-x-6">
                     <NavLink 
                         to="/"
                         className={({ isActive }) => 
-                            isActive ? "text-black border-b-2 border-black font-semibold" : "text-stone font-semibold"
+                            isActive ? "text-black border-b-2 border-white font-semibold" : "text-gray-900 font-semibold"
                         }
                     >
                         Projects
@@ -20,7 +20,7 @@ export default function Header() {
                     <NavLink 
                         to="/aboutme"
                         className={({ isActive }) => 
-                            isActive ? "text-black border-b-2 border-black hover:bg-coolgrey font-semibold" : "text-stone font-semibold"
+                            isActive ? "text-gray-900 border-b-2 border-white font-semibold" : "text-gray-900 font-semibold"
                         }
                     >
                         About me
@@ -30,3 +30,4 @@ export default function Header() {
         </header>
     );
 }
+
