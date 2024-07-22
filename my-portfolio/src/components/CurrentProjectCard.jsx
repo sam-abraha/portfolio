@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function CurrentProjectCard({ techstack, title, description }) {
   const techItems = techstack.split(',');
@@ -25,7 +26,12 @@ export default function CurrentProjectCard({ techstack, title, description }) {
           ))}
         </p>
         <h1 className='text-4xl md:text-3xl lg:text-8xl font-bold text-left hover:ml-4 transition-all duration-500 ease-in-out transform hover:scale-110'>{title}</h1>
-        <p className="text-gray-700 mt-4 text-left">{description}</p>
+        <p className="text-gray-700 mt-8 text-left">{description}</p>
+        <Link to={"https://github.com/sam-abraha/dorms-nestjs"} 
+              className="border-solid bg-white text-black mt-8 text-lg py-4 px-8 rounded-lg
+               hover:bg-gray-200 shadow-md transition duration-300 ease-in-out"
+                target="_blank" rel="noopener noreferrer">Github
+        </Link>
       </div>
     </div>
   );
