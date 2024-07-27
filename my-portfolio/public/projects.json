@@ -1,40 +1,54 @@
 [
   {
     "id": "1",
+    "github" : "flask-chat-mongo",
+    "videoSrc": "/videos/flask-chat-mongo.mp4",
+    "title": "Chat",
+    "description": "A chat room applicaton to text with users in real time.",
+    "techstack": "python, mongodb, flask",
+    "createdAt": "2023",
+    "idea": "The idea of this project was to create a chat application using Flask, a micro web framework written in Python, mainly to familiarize myself with Python and Flask, due to its unopinionated approach and rather easy learning curve.",
+    "implementation" :"This web application is a real-time chat platform built with Flask and Flask-SocketIO for bi-directional communication using WebSockets. Authentication is handled through Flask-Login, with user data stored in MongoDB. The application allows users to create and join chat rooms identified by room codes, which are randomly generated. Room data, including messages and member count, is managed in MongoDB.\n\n Real-time messaging is provided by Flask-SocketIO, using Eventlet as the asynchronous server. Flask sessions are used to maintain user state across requests, ensuring that users remain authenticated in chat rooms. In contrast to the other applications, is this one not a full stack application, since it uses Flask to render all HTML templates. The templates are used to render pages such as login, signup, home and rooms. All templates are styled with TailwindCSS due to it's ease of use and fast style of providing CSS. The application is deployed using Render, providing a robust pipeline for deployment.",
+    "deployment" : "https://flask-chat-mongo.onrender.com",
+    "videoSrc_2" : ""
+           
+  },
+  {
+    "id": "2",
     "github": "spring-react-progex",
     "videoSrc": "/videos/murdoc.mp4",
     "title": "Murdoc",
     "description": "A social media web application with the twist that a user post consists of a document.",
     "techstack": "react, spring-boot, firebase",
-    "createdAt": "2023-07-21",
+    "createdAt": "2023",
     "idea": "As part of an uni project we were given the task to create any type of software able to interface with a database. Murdoc is a social media web application that lets users post PDF document on thier feed. It's features resembles a typical social media application. Users are able to post, follow each other and view each others document. The application places special emphasis on document sharing by features such as saving posts and viewing them in a virtual directory. The most important part of this project was to understand the underlying technology to create such a application, instead of creating a ground breaking way of sharing documents.  ",
     "implementation" :"Murdoc is full stack web application with a typical REST service architecture.  The backend, built with Spring Boot, provides RESTful API endpoints for CRUD operations. The frontend, built with React, consumes these endpoints to manage user interactions and document sharing. Google's Firebase cloud service is used for data storage. Firebase Authentication handles authentication, ensuring secure access to the application. From a devolopers view, adding the REST service is impractical, since the application could be achieved by letting the client talk to Firebase directly. However, creating the application as a REST service adds security as our Spring server acts as a proxy between the cloud and client.",
     "deployment" : "",
     "videoSrc_2" : "/videos/murdoc2.mp4"
   },
   {
-    "id": "2",
+    "id": "3",
     "github" : "task-management-react",
     "videoSrc": "/videos/task-management-nestjs.mp4",
     "title": "Tasks",
     "description": "Task management web application to sort out tasks.",
     "techstack": "typescript, nestjs, react, postgres",
-    "createdAt": "2023-08-10",
-    "idea": "The idea behind this project was to create a full stack web application using a technology stack comprising of React, NestJS and Postgresql. The primary focus of this project was to familiarize myself with my NestJS, aiming to create a solid and robust backend. NestJS was chosen due to its modular and opinionated structure, which i hoped would provide a clearer insight into developing and managing scalable applications using best practices. The requirements on my frontend were a rather simple but a functional task manager that lets user sort, delete and update tasks based on their overall state.",
+    "createdAt": "2024",
+    "idea": "The idea behind this project was to create a full stack web application using a technology stack comprising of React, NestJS and PostgreSQL. The primary focus of this project was to familiarize myself with my NestJS, aiming to create a solid and robust backend. NestJS was chosen due to its modular and opinionated structure, which i hoped would provide a clearer insight into developing and managing scalable applications using best practices. The requirements on my frontend were a rather simple but a functional task manager that lets user sort, delete and update tasks based on their overall state.",
     "implementation" :"The backend, built with NestJS, has a modular structure, consisting of an Auth and Task module. The Auth Module is responsible for handling authentication and authorization within the application. Key components include: A user entitiy, which defines attriubtes of a user in the database. A User Repository, an instance that communicates with the user database, responsible for creating and managing user records. A Passport Strategy, that uses JWT (JSON Web Token) for authentication. The JWT strategy parses credentials from incoming requests and calls a validate function to determine the corresponding user, enabling secure data access. The User repository and JWT strategy are injected into the service class. This Service class receives information from the auth controller, which handles HTTP requests for sign-in and sign-up routes. The injection is done by means of dependeny injection, which promotes seperation of concerns, thus enhances the maintainability of the code.\n\n The Task module follows a typical 'Three Layered Architecture', comprimising a Controller, Service and Repository. The Controller handles all HTTP requests and returns repsonses for all task reated endpoints. The Service manages data retrieval and updates between the controller and repository layer. The Repository directly interacts with the database to perform CRUD operations on tasks. \nAdditionally a guard is used to protect the entire route, ensuring that only authenticated users can perform task related actions. ",
     "deployment" : "https://my-fullstack-task-manager.netlify.app",
     "videoSrc_2" : ""
   },
   {
-    "id": "3",
+    "id": "4",
     "github" : "blog",
     "videoSrc": "/videos/techblog.mp4",
     "title": "Blog",
     "description": "A blog web application which allows users to post their news.",
     "techstack": "typescript, react, express, prisma, postgres, google",
-    "createdAt": "2024-05",
-    "idea": "The primary goal of this project was to develop a full-stack application using a technology stack comprising Express.js, PrismaORM, and PostgreSQL. I specifically selected this stack out of a desire to deepen my knowledge of Express.js and to explore the use of an ORM that integrates seamlessly with a relational database. I decided to create a blog application because it encompasses all CRUD operations, providing a comprehensive learning experience. Additionally, the incorpatation of a cloud ensures persistent storage of images. ",
-    "implementation" :"The project is structured in a typical REST service architecture. The backend is built with Express.js, which provides endpoints for all CRUD operations required by the frontend. The backend is layered into a modular structure consisting of a services and routes module. The service module provides the logic regarding authentication and CRUP operations, which then are made use of inside their respective routes.\n\n The frontend, built with React, allows users to upload, edit, fetch, and delete blog posts. User authentication is handled using JSON Web Tokens (JWT). When a user logs in, a token is generated and signed with user information, then stored as an HTTP cookie. A profile endpoint continuously validates the token whenever the header gets mounted and responds with the corresponding user information. The blog creation and editing functionalities utilize the React-Quill library. React-Quill offers a user-friendly text editor, allowing users to create and edit posts effortlessly. All user and blog post data is stored in a PostgreSQL database. Firebase Cloud is used to provide a persistent storage for the file images in order to achieve reliabilty, even after restarts and redeployments. The database schema is designed to reference user and post entries, ensuring data integrity.\n\n The frontend is deployed using Netlify, providing a seamless deployment pipeline for the React application. The backend server and the PostgreSQL database are deployed using Railway, ensuring reliable hosting for the server and database.",
+    "createdAt": "2024",
+    "idea": "The primary goal of this project was to develop a full-stack application using a technology stack comprising Express.js, PrismaORM, and PostgreSQL. I specifically selected this stack out of a desire to deepen my knowledge of Express.js and to explore the use of an ORM that integrates well with a relational database. I decided to create a blog application because it includes all CRUD operations, providing a comprehensive learning experience. Additionally, a cloud service is needed to ensure persistance for the images.",
+    "implementation" :"The project is structured in a typical REST service architecture. The backend is built with Express.js, which provides endpoints for all CRUD operations required by the frontend. The backend is layered into a modular structure consisting of a services and routes module. The service module provides the logic regarding authentication and CRUP operations, which then are made use of inside their respective routes.\n\n The frontend, built with React, allows users to upload, edit, fetch, and delete blog posts. User authentication is handled using JSON Web Tokens (JWT). When a user logs in, a token is generated and signed with user information, then stored as an HTTP cookie. A profile endpoint continuously validates the token whenever the header gets mounted and responds with the corresponding user information. The blog creation and editing functionalities utilize the React-Quill library. React-Quill offers a user-friendly text editor, allowing users to create and edit posts effortlessly. All user and blog post data is stored in a PostgreSQL database. Firebase Cloud is used to provide a persistent storage for the file images in order to achieve reliabilty, even after restarts and redeployments. The database schema is designed to reference user and post entries, ensuring data integrity.\n\n The frontend is deployed using Netlify, providing a great deployment pipeline for the React application. The backend server and the PostgreSQL database are deployed using Railway, ensuring reliable hosting for the server and database.",
     "deployment" : "https://myfullstacktechblog.netlify.app",
     "videoSrc_2" : ""
            
