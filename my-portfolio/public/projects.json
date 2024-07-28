@@ -14,16 +14,17 @@
   },
   {
     "id": "2",
-    "github": "spring-react-progex",
-    "videoSrc": "/videos/murdoc.mp4",
-    "title": "Murdoc",
-    "description": "A social media web application with the twist that a user post consists of a document.",
-    "techstack": "react, spring-boot, firebase",
+    "github" : "flask-chat-mongo",
+    "videoSrc": "/videos/flask-chat-mongo.mp4",
+    "title": "Chat",
+    "description": "A chat room applicaton to text with users in real time.",
+    "techstack": "python, mongodb, flask",
     "createdAt": "2023",
-    "idea": "As part of an uni project we were given the task to create any type of software able to interface with a database. Murdoc is a social media web application that lets users post PDF document on thier feed. It's features resembles a typical social media application. Users are able to post, follow each other and view each others document. The application places special emphasis on document sharing by features such as saving posts and viewing them in a virtual directory. The most important part of this project was to understand the underlying technology to create such a application, instead of creating a ground breaking way of sharing documents.  ",
-    "implementation" :"Murdoc is full stack web application with a typical REST service architecture.  The backend, built with Spring Boot, provides RESTful API endpoints for CRUD operations. The frontend, built with React, consumes these endpoints to manage user interactions and document sharing. Google's Firebase cloud service is used for data storage. Firebase Authentication handles authentication, ensuring secure access to the application. From a devolopers view, adding the REST service is impractical, since the application could be achieved by letting the client talk to Firebase directly. However, creating the application as a REST service adds security as our Spring server acts as a proxy between the cloud and client.",
-    "deployment" : "",
-    "videoSrc_2" : "/videos/murdoc2.mp4"
+    "idea": "The idea of this project was to create a chat application using Flask, a micro web framework written in Python, mainly to familiarize myself with Python and Flask, due to its unopinionated approach and rather easy learning curve.",
+    "implementation" :"This web application is a real-time chat platform built with Flask and Flask-SocketIO for bi-directional communication using WebSockets. Authentication is handled through Flask-Login, with user data stored in MongoDB. The application allows users to create and join chat rooms identified by room codes, which are randomly generated. Room data, including messages and member count, is managed in MongoDB.\n\n Real-time messaging is provided by Flask-SocketIO, using Eventlet as the asynchronous server. Flask sessions are used to maintain user state across requests, ensuring that users remain authenticated in chat rooms. In contrast to the other applications, is this one not a full stack application, since it uses Flask to render all HTML templates. The templates are used to render pages such as login, signup, home and rooms. All templates are styled with TailwindCSS due to it's ease of use and fast style of providing CSS. The application is deployed using Render, providing a robust pipeline for deployment.",
+    "deployment" : "https://flask-chat-mongo.onrender.com",
+    "videoSrc_2" : ""
+           
   },
   {
     "id": "3",
