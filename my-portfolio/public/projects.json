@@ -31,7 +31,7 @@
     "github" : "task-management-react",
     "videoSrc": "/videos/task-management-nestjs.mp4",
     "title": "Tasks",
-    "description": "Task management web application to sort out tasks.",
+    "description": "Task manager web application to organize and track tasks.",
     "techstack": "typescript, nestjs, react, postgres",
     "createdAt": "2024",
     "idea": "The idea behind this project was to create a full stack web application using a technology stack comprising of React, NestJS and PostgreSQL. The primary focus of this project was to familiarize myself with my NestJS, aiming to create a solid and robust backend. NestJS was chosen due to its modular and opinionated structure, which i hoped would provide a clearer insight into developing and managing scalable applications using best practices. The requirements on my frontend were a rather simple but a functional task manager that lets user sort, delete and update tasks based on their overall state.",
