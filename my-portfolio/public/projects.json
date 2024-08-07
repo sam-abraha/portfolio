@@ -22,7 +22,7 @@
     "createdAt": "2023",
     "idea": "The idea of this project was to create a chat application using Flask, a micro web framework written in Python, mainly to familiarize myself with Python and Flask, due to its unopinionated approach and rather easy learning curve.",
     "implementation" :"This web application is a real-time chat platform built with Flask and Flask-SocketIO for bi-directional communication using WebSockets. Authentication is handled through Flask-Login, with user data stored in MongoDB. The application allows users to create and join chat rooms identified by room codes, which are randomly generated. Room data, including messages and member count, is managed in MongoDB.\n\n Real-time messaging is provided by Flask-SocketIO, using Eventlet as the asynchronous server. Flask sessions are used to maintain user state across requests, ensuring that users remain authenticated in chat rooms. In contrast to the other applications, is this one not a full stack application, since it uses Flask to render all HTML templates. The templates are used to render pages such as login, signup, home and rooms. All templates are styled with TailwindCSS due to it's ease of use and fast style of providing CSS. The application is deployed using Render, providing a robust pipeline for deployment.",
-    "deployment" : "https://flask-chat-mongo.onrender.com",
+    "deployment" : "https://flask-chat-mongo.onrender.com\n Please note that the application may take up to 1m to boot up due to inactivity and settings on Render.",
     "videoSrc_2" : ""
            
   },
