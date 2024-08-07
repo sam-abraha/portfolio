@@ -79,7 +79,9 @@ export default function CaseStudyTemplate({ id, title, createdAt, videoSrc,video
             <h2 className="text-2xl font-semibold text-gray-700">Deployment</h2>
             <p>
               Visit the deployment on{' '}
-              <Link to={deployment}>{deployment}</Link>
+              <Link to={deployment.split('\n')[0]}>{deployment.split('\n')[0]}</Link>
+            <br/>
+            {deployment.split('\n')[1]}
             </p>
           </section>
           )}
