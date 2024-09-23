@@ -13,7 +13,7 @@ export default function CurrentProjectCard({ techstack, title, description }) {
             <span className="block">Code</span>
             <span className="block">Project</span>
           </h1>
-          <p className="font-semibold text-right mt-2">Angular application to help students discover and create dorm reviews.</p>
+          <p className="font-semibold text-right mt-2">Web application to help students discover and create dorm reviews.</p>
         </div>
       </div>
       <div className="flex-1 flex-shrink-0 flex flex-col items-start mt-12" style={{ minWidth: '300px' }}>
@@ -27,11 +27,6 @@ export default function CurrentProjectCard({ techstack, title, description }) {
         </p>
         <h1 className='text-4xl md:text-3xl lg:text-8xl font-bold text-left hover:ml-4 transition-all duration-500 ease-in-out transform hover:scale-110'>{title}</h1>
         <p className="text-gray-700 mt-8 text-left">{description}</p>
-        <Link to={"https://github.com/sam-abraha/dorms-nestjs"} 
-              className="border-solid bg-white text-black mt-8 text-lg py-4 px-8 rounded-lg
-               hover:bg-gray-200 shadow-md transition duration-300 ease-in-out"
-                target="_blank" rel="noopener noreferrer">Github
-        </Link>
       </div>
     </div>
   );
