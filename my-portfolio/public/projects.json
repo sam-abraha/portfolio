@@ -17,7 +17,7 @@
     "github" : "flask-chat-mongo",
     "videoSrc": "/videos/flask-chat-mongo.mp4",
     "title": "Chat",
-    "description": "A chat room applicaton to text with users in real time.",
+    "description": "A chat room application to text with users in real time.",
     "techstack": "python, mongodb, flask",
     "createdAt": "2023",
     "idea": "The idea of this project was to create a chat application using Flask, a micro web framework written in Python, mainly to familiarize myself with Python and Flask, due to its unopinionated approach and rather easy learning curve.",
