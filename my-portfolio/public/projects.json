@@ -1,16 +1,15 @@
-[  
-  {
+[  {
     "id": "1",
-    "github": "spring-react-progex",
-    "videoSrc": "/videos/murdoc.mp4",
-    "title": "Murdoc",
-    "description": "A social media web application with the twist that a user post consists of a document.",
-    "techstack": "react, spring-boot, firebase",
-    "createdAt": "2023",
-    "idea": "As part of an uni project we were given the task to create any type of software able to interface with a database. Murdoc is a social media web application that lets users post PDF document on thier feed. It's features resembles a typical social media application. Users are able to post, follow each other and view each others document. The application places special emphasis on document sharing by features such as saving posts and viewing them in a virtual directory. The most important part of this project was to understand the underlying technology to create such a application, instead of creating a ground breaking way of sharing documents.  ",
-    "implementation" :"Murdoc is full stack web application with a typical REST service architecture.  The backend, built with Spring Boot, provides RESTful API endpoints for CRUD operations. The frontend, built with React, consumes these endpoints to manage user interactions and document sharing. Google's Firebase cloud service is used for data storage. Firebase Authentication handles authentication, ensuring secure access to the application. From a devolopers view, adding the REST service is impractical, since the application could be achieved by letting the client talk to Firebase directly. However, creating the application as a REST service adds security as our Spring server acts as a proxy between the cloud and client.",
-    "deployment" : "",
-    "videoSrc_2" : "/videos/murdoc2.mp4"
+    "github": "devops-flask",
+    "videoSrc": "/videos/devops-flask.mp4",
+    "title": "CI/CD",
+    "description": "A production-style DevOps project demonstrating a complete CI/CD workflow using Flask, Docker, GitHub Actions, Nginx, Prometheus, Grafana and VPS deployment.",
+    "techstack": "python, flask, docker, github actions, prometheus, grafana, nginx, pytest",
+    "createdAt": "2026",
+    "idea": "The goal of this project was to understand and implement real-world DevOps workflows from development to deployment. Instead of focusing on complex business logic, the project focuses on infrastructure automation, CI/CD pipelines, containerization, reverse proxies, HTTPS configuration, and VPS hosting.",
+    "implementation": "The project was implemented as a lightweight Flask REST API focused on demonstrating modern DevOps workflows and deployment practices. Automated tests were created using Pytest and integrated into a GitHub Actions CI pipeline. The application was containerized using Docker to ensure consistent execution across different environments. A CI/CD workflow was implemented to automatically build Docker images, push them to Docker Hub, and deploy updates to a DigitalOcean VPS through SSH-based automation. On the VPS, Nginx was configured as a reverse proxy forwarding HTTPS traffic to the running Docker container. SSL certificates were configured using Let's Encrypt to secure the deployment with HTTPS. Automatic container restart policies were added to improve reliability and resiliency after server restarts or failures. Additionally I implemented observability using Prometheus and Grafana.",
+    "deployment": "",
+    "videoSrc_2" : ""
   },
   {
     "id": "2",
@@ -40,8 +39,22 @@
     "videoSrc_2" : ""
            
   },
-    {
+  {
     "id": "4",
+    "github": "spring-react-progex",
+    "videoSrc": "/videos/murdoc.mp4",
+    "title": "Murdoc",
+    "description": "A social media web application with the twist that a user post consists of a document.",
+    "techstack": "react, spring-boot, firebase",
+    "createdAt": "2023",
+    "idea": "As part of an uni project we were given the task to create any type of software able to interface with a database. Murdoc is a social media web application that lets users post PDF document on thier feed. It's features resembles a typical social media application. Users are able to post, follow each other and view each others document. The application places special emphasis on document sharing by features such as saving posts and viewing them in a virtual directory. The most important part of this project was to understand the underlying technology to create such a application, instead of creating a ground breaking way of sharing documents.  ",
+    "implementation" :"Murdoc is full stack web application with a typical REST service architecture.  The backend, built with Spring Boot, provides RESTful API endpoints for CRUD operations. The frontend, built with React, consumes these endpoints to manage user interactions and document sharing. Google's Firebase cloud service is used for data storage. Firebase Authentication handles authentication, ensuring secure access to the application. From a devolopers view, adding the REST service is impractical, since the application could be achieved by letting the client talk to Firebase directly. However, creating the application as a REST service adds security as our Spring server acts as a proxy between the cloud and client.",
+    "deployment" : "",
+    "videoSrc_2" : "/videos/murdoc2.mp4"
+  },
+
+    {
+    "id": "5",
     "github" : "task-management-react",
     "videoSrc": "/videos/task-management-nestjs.mp4",
     "title": "Tasks",
